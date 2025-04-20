@@ -1,0 +1,102 @@
+/* KLEUREN THEMA */
+:root {
+    --kleur-1: #8C0783; /* Paars */
+    --kleur-2: #0487D9; /* Blauw */
+    --kleur-3: #F2811D; /* Oranje */
+    --tekst-wit: #ffffff;
+    --tekst-zwart: #000000;
+    --achtergrond: #f8f9fa;
+  }
+  
+  /* ALGEMENE STIJL */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--achtergrond);
+    color: var(--tekst-zwart);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    color: var(--kleur-1);
+  }
+  
+  /* NAVIGATIEBALK */
+  .custom-navbar {
+    background-color: var(--kleur-1) !important;
+  }
+  
+  .custom-navbar .nav-link,
+  .custom-navbar .navbar-brand {
+    color: var(--tekst-wit) !important;
+  }
+  
+  .custom-navbar .nav-link:hover,
+  .custom-navbar .nav-link.active {
+    color: var(--tekst-wit) !important;
+    background-color: var(--kleur-2);
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  /* PROJECTKAARTEN */
+  .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    color: var(--kleur-2);
+  }
+  
+  .btn-primary {
+    background-color: var(--kleur-2);
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--kleur-3);
+    color: var(--tekst-wit);
+  }
+  
+  .btn-secondary.disabled {
+    background-color: #ccc;
+    border: none;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: var(--kleur-1);
+    color: var(--tekst-wit);
+    font-size: 0.9rem;
+  }
+  
+  /* RESPONSIVE AANPASSINGEN */
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      width: 120px;
+      height: auto;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
