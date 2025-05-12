@@ -10,12 +10,14 @@ fetch('js/kontich.geojson')
   .then(response => response.json())
   .then(geojsonData => {
     const geojsonLayer = L.geoJSON(geojsonData, {
-      style: {
-        color: "#e60005",
-        weight: 2,
-        fill: false
-      }
-    }).addTo(map);
+        filter: feature => feature.geometry.type !== "Point", // ⛔ sla punten over
+        style: {
+          color: "#e60005",
+          weight: 2,
+          fill: false
+        }
+      }).addTo(map);
+      
 
     // Zoom naar de volledige gemeentegrens
     map.fitBounds(geojsonLayer.getBounds());
