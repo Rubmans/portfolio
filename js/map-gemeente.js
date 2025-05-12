@@ -10,7 +10,7 @@ let kontichMarker = L.marker([51.1324, 4.4485]).addTo(map);
 kontichMarker.bindPopup("<b>Kontich Centrum</b><br>Marktplein").openPopup();
 
 //bepaal de gemeentegrezen van Kontich
-fetch('kontich.geojson')
+fetch('js/kontich.geojson')
   .then(response => response.json())
   .then(geojsonData => {
     L.geoJSON(geojsonData, {

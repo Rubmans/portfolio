@@ -1,5 +1,6 @@
 #map-gemeente {
-    /* neem de volle breedte in van het parent element en heeft een hoogte van 250px */
     height: 250px;
     width: 100%;
-}
+    min-height: 250px; /* extra zeker dat hij niet instort */
+  }
+  
