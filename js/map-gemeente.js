@@ -24,5 +24,5 @@ fetch('js/kontich.geojson')
 
     // Voeg marker toe na fitBounds zodat hij het zoomniveau niet bepaalt
     let kontichMarker = L.marker([51.13543, 4.44560]).addTo(map);
-    kontichMarker.bindPopup("<b>Kontich Centrum</b><br>Gemeenteplein");
+    kontichMarker.bindPopup("<b>Kontich</b><br>Gemeenteplein").openPopup();
   });
