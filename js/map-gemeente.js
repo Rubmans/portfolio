@@ -5,10 +5,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-// plaats een marker (coördinaten 51.1324, 4.4485) met als tekst "Kontich Centrum"
-let kontichMarker = L.marker([51.1324, 4.4485]).addTo(map);
-kontichMarker.bindPopup("<b>Kontich Centrum</b><br>Gemeenteplein").openPopup();
-
 //bepaal de gemeentegrezen van Kontich
 fetch('js/kontich.geojson')
   .then(response => response.json())
@@ -26,5 +22,5 @@ fetch('js/kontich.geojson')
 
     // Voeg marker toe na fitBounds zodat hij het zoomniveau niet bepaalt
     let kontichMarker = L.marker([51.1324, 4.4485]).addTo(map);
-    kontichMarker.bindPopup("<b>Kontich Centrum</b><br>Marktplein");
+    kontichMarker.bindPopup("<b>Kontich Centrum</b><br>Gemeenteplein");
   });
